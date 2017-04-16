@@ -1,4 +1,3 @@
-
 Part 1: Discussion Questions
 
 Runtime
@@ -82,4 +81,3 @@ food - Italian - lasagna - pizza - thin crust - "Chicago-style"
 3. How is a binary search tree different from other trees?
 
 Binary search tree has 0~2 children per node, and has relatively balanced structure on either side of trees and sub-trees. It also has a rule that constructs the tree. Because of this binarily applied rule, it is possible for the program to fastly disregard 50% of the choices left to make per node.
-
