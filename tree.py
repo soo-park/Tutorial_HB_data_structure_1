@@ -91,8 +91,17 @@ class Tree(object):
 
         """
 
-        # FIXME
-        pass
+        to_visit = [self.root]
+
+        while to_visit:
+            node = to_visit.pop()
+
+            if node.data == data:
+                return node
+            else:
+                to_visit.extend(node.children)
+
+
 
 if __name__ == "__main__":
     import doctest
