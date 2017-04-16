@@ -1,0 +1,85 @@
+
+Part 1: Discussion Questions
+
+Runtime
+
+1. When calculating the Big O notation for a particular algorithm, it’s necessary to consider the length of time it takes for the algorithm to run as the algorithm’s workload approaches infinity. You can think of the workload as the number of tasks required to complete a job. What determines the workload of figuring out whether your box of animal crackers contains an elephant?
+
+The workload will be determined by several different factors
+
+- Can elephant cracker be distinctly visible and different from others no matter how much the amount is if it is there? (O(1))
+
+- Is there some mechanism that can divide the crackers half - like boxes and machines - and measure to see if the elephant cracker is in there? (like classic gold to fake gold bead case, you can divide and concur, for example, by measuring weight if the measurement is trustworthy: the case will be O(log n). Though, if it is boxed you can do it up to the last box, and then that box will go to O(n) unless manageable amount can be done easily where the box will be constant (the amount of cracker in the box) which will be ignored, which will make the result O(log n))
+
+- Is there something you have to do (like peeling a box, piecing together the broken ones...) before reach into the cracker? If yes, and if you have to check each cracker, then it can be considered as O(n^2). If you have to go through something, but then it is visible right away (O(1)) then the worst case take over so O(n) for the procedure. If you are going through the crackers one by one OR if the procedure is one by one - and not both of the cases are one by one and have to happen together like mentioned above - then it will be O(n)
+
+- Since the individual cracker being or not being an elephant does not have any effect on the result, it will not likely be the exponential time (O(2^n)) or the Factorial time O(n!)
+
+
+2. Order the following runtimes in descending order of efficiency (that is, fastest runtimes first, slowest last) as n approaches infinity:
+
+O(1) - O(log n) - O(n) - O(n log n) - O(n2) - O(2n)
+
+
+Stacks and Queues
+
+1. In the following cases, would a stack or queue be a more appropriate data structure?
+
+  1. The process of loading and unloading pallets onto a flatbed truck
+        stack
+
+  2. Putting bottle caps on bottles of beer as they roll down an assembly line
+        queue
+
+  3. Calculating the solution to this mathematical expression: 
+     2 + (7 * 4) - (3 / 2)
+        queue
+
+2. Describe two more situations where a queue would be an appropriate data structure.
+
+- A to-do list for errands over a weekend. The errands have changing priorities and time is limited. The most prioritized one will be executed first.
+
+- Jazz improvisation. Play note in first one in first out. You may change the order or throw in or delete a note or two.
+
+
+3. Describe two more situations where a stack would be an appropriate data structure.
+
+- Getting the book I want from a "stack of" books. Get rid of the top ones to get the one needed.
+
+- Getting a P***s potato chip out of that tube shaped container. You have to get through the top ones to get to the bottom ones.
+
+
+Linked Lists
+
+1. Given the linked list below, which are the nodes? What is the data for each node? Where is the head? Where is the tail? (Please be as specific as possible — exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?)
+
+The left part of the conjoined boxes that contains fruites are the nodes. Right side of those box contains pointer variables. As for the one non-fruit-item box, it is a class definition that contains head pointer. Since the head is pointing to the "Apple" node, "Apple" is a head. Tail is not defined and pointed, but the "Cherry" node is tail, since it is poining to None.
+
+
+2. What’s the difference between doubly- and singly-linked lists?
+
+Double linked list has "previous" & "next" node, whereas singly-linked list only has "next". It is easier to traverse backward in DLL, since it has a back "arrow".
+
+
+3. Why is it faster to append to a linked list if we keep track of the tail as an attribute?
+
+Because you can just find the tail and have it point to the new node, and make the new node tail (and make the new node point to None or not depending on the default). (O(1) operation)
+If you do not have the tail, you have to go through every single node to find the tail. (O(n) operation)
+
+
+Trees
+
+1. Given the tree above, in what order would a Breadth First Search (BFS) algorithm visit each node until finding burritos (starting at food)? Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+food - Italian - Indian - Mexican - lasagna - pizza - tikka masala - saag - "buritos"
+
+
+2. Given the tree above, in what order would a Depth First Search (DFS) algorithm visit each node until finding Chicago-style (starting at food)? Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+food - Italian - lasagna - pizza - thin crust - "Chicago-style" 
+
+
+3. How is a binary search tree different from other trees?
+
+Binary search tree has 0~2 children per node, and has relatively balanced structure on either side of trees and sub-trees. It also has a rule that constructs the tree. Because of this binarily applied rule, it is possible for the program to fastly disregard 50% of the choices left to make per node.
+
